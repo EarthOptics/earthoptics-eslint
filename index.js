@@ -128,7 +128,6 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'airbnb',
     'airbnb-typescript',
-    'airbnb/hooks',
     'plugin:import/recommended',
     'plugin:import/typescript',
     'plugin:jest/recommended',
