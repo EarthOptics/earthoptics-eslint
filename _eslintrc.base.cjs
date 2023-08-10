@@ -5,7 +5,10 @@
 module.exports = {
   overrides: [], // directory or file-specific overrides
   plugins: [], // any additional plugins that should be applied (plugins provide rules)
-  extends: [], // any additional configs that should be applied. Order matters! Last one wins.
+  extends: [
+    '@earth-optics/typescript',
+    // any additional configs that should be applied. Order matters! Last one wins.
+  ],
   ignorePatterns: [
     'infrastructure/cdk.out',
     'cdk.out',
