@@ -1,6 +1,6 @@
 {
   "name": "@earth-optics/eslint",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ESLint configurations for TypeScript projects",
   "repository": "EarthOptics/earthoptics-eslint",
   "keywords": [
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/EarthOptics/earthoptics-eslint/issues"
   },
-  "homepage": "https://github.com/EarthOptics/earthoptics-eslint#readme"
+  "homepage": "https://github.com/EarthOptics/earthoptics-eslint#readme",
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
 }
