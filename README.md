@@ -69,6 +69,11 @@ need to install the following extensions.
 
 - [Rewrap](https://marketplace.visualstudio.com/items?itemName=stkb.rewrap) for wrapping long lines
   of text in comments and markdown files.
+- [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
+  Markdown linting and style checking
+- [Markdown
+  All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one): all
+  you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
 
 #### Vim
 
