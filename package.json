@@ -1,8 +1,12 @@
 {
-  "name": "@earth-optics/eslint",
+  "name": "@earth-optics/eslint-config-typescript",
   "version": "1.0.2",
-  "description": "ESLint configurations for TypeScript projects",
-  "repository": "EarthOptics/earthoptics-eslint",
+  "description": "ESLint configuration for TypeScript projects",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EarthOptics/earthoptics-eslint.git",
+    "directory": "packages/eslint-typescript"
+  },
   "keywords": [
     "eslint",
     "typescript",
@@ -11,17 +15,30 @@
     "lint",
     "config"
   ],
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
-  },
   "author": "EarthOptics",
   "bugs": {
     "url": "https://github.com/EarthOptics/earthoptics-eslint/issues"
   },
   "homepage": "https://github.com/EarthOptics/earthoptics-eslint#readme",
-  "devDependencies": {
-    "prettier": "^2.8.8"
+  "dependencies": {
+    "@typescript-eslint/parser": "5.62.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-import-resolver-typescript": "^3.6.0"
+  },
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "5.62.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-ext": "^0.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jest": "^27.2.1",
+    "eslint-plugin-jsdoc": "41.0.0",
+    "eslint-plugin-no-relative-import-paths": "^1.5.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "prettier": "^2.8.8",
+    "prettier-plugin-multiline-arrays": "^2.0.0"
   }
 }
