@@ -266,6 +266,7 @@ module.exports = {
     'import/no-default-export': 2,
     'import/no-unresolved': 2,
     'import/prefer-default-export': 0,
+    'import/order': 0, // conflicts with `simple-import-sort/imports`, which handles things fine
     'jsdoc/require-jsdoc': 0, // waaaay too crazy // "jsdoc"
     'no-relative-import-paths/no-relative-import-paths': [
       2,
