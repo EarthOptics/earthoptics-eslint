@@ -42,8 +42,7 @@ module.exports = {
     'jest/globals': true,
   },
   parserOptions: {
-    // Do NOT mess with the Jenga tower of ESLint and TypeScript.
-    project: './tsconfig.json',
+    // project: './tsconfig.json', // TODO: not sure about this
     ecmaVersion: 2022, // allows for the parsing of modern ECMAScript features
     sourceType: 'module', // allows for the use of imports
     'import/parsers': {
