@@ -2,14 +2,7 @@
   "name": "@earth-optics/eslint",
   "version": "1.0.0",
   "description": "ESLint configurations for TypeScript projects",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EarthOptics/earthoptics-eslint.git"
-  },
+  "repository": "EarthOptics/earthoptics-eslint",
   "keywords": [
     "eslint",
     "typescript",
@@ -18,8 +11,12 @@
     "lint",
     "config"
   ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "author": "EarthOptics",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/EarthOptics/earthoptics-eslint/issues"
   },
