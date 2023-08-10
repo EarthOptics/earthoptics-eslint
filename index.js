@@ -133,7 +133,11 @@ module.exports = {
     'plugin:jsdoc/recommended-typescript',
     'prettier', // always last!
   ],
-  ignorePatterns: [], // any dirs or files you want to ignore
+  ignorePatterns: [
+    'infrastructure/cdk.out',
+    'cdk.out',
+    // add any additional file or directory patterns that you want to ignore
+  ],
   rules: {
     // This section contains all the ultra-specific rules that are not covered by the configs, or
     // that are covered but we want to override. For consistency, use only the numeric value instead

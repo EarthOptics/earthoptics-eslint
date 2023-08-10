@@ -6,7 +6,11 @@ module.exports = {
   overrides: [], // directory or file-specific overrides
   plugins: [], // any additional plugins that should be applied (plugins provide rules)
   extends: [], // any additional configs that should be applied. Order matters! Last one wins.
-  ignorePatterns: [], // any files matching these patterns will be ignored
+  ignorePatterns: [
+    'infrastructure/cdk.out',
+    'cdk.out',
+    // add any additional file or directory patterns that you want to ignore
+  ],
   settings: {
     'import/resolver': {
       node: {
