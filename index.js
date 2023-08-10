@@ -262,11 +262,13 @@ module.exports = {
       },
     ],
     'ext/lines-between-object-properties': [2, 'never'],
+    'import/first': 2,
     'import/newline-after-import': 2,
     'import/no-default-export': 2,
+    'import/no-duplicates': 2,
     'import/no-unresolved': 2,
-    'import/prefer-default-export': 0,
     'import/order': 0, // conflicts with `simple-import-sort/imports`, which handles things fine
+    'import/prefer-default-export': 0,
     'jsdoc/require-jsdoc': 0, // waaaay too crazy // "jsdoc"
     'no-relative-import-paths/no-relative-import-paths': [
       2,
