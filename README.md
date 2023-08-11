@@ -101,15 +101,18 @@ need to install the following extensions.
 Consider adding these commands to the `scripts` block of your `package.json` file. They will perform
 the following actions:
 
-- `npm run lint`: run ESLint on all TypeScript files in the project
+- `npm run lint`: run ESLint on all TypeScript files in this directory and subdirectories
 - `npm run lint:fix`: same as `npm run lint` plus fix any issues that can be automatically fixed
+- `npm run format`: only run Prettier on all files in the current directory and subdirectories
+- `npm run beautify`: run ESLint check + auto-fix, then run Prettier
 
 ```json
 {
   "scripts": {
+    "beautify": "npm run lint:fix && npm run format",
     "lint": "eslint --ext .ts,.tsx .",
     "lint:fix": "eslint --fix --ext .ts,.tsx .",
-    "prettier": "prettier --write ."
+    "format": "prettier --write ."
   }
 }
 ```
