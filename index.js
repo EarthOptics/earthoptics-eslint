@@ -13,6 +13,7 @@ const PADDING = [
   { blankLine: 'always', prev: '*', next: 'return' },
   { blankLine: 'always', prev: 'if', next: 'expression' },
   { blankLine: 'always', prev: 'let', next: 'const' },
+  { blankLine: 'always', prev: 'expression', next: 'const' },
   { blankLine: 'always', prev: 'let', next: 'expression' },
   { blankLine: 'always', prev: 'var', next: 'block-like' },
   // Add a new line AFTER these, except as overriden by "never" and "order matters" rules
