@@ -8,6 +8,7 @@ This repo provides an ESLint configurations for TypeScript projects.
     - [Install via `npm`](#install-via-npm)
     - [Or install via `yarn`](#or-install-via-yarn)
   - [Copy config files](#copy-config-files)
+  - [Include the eslint file in your tsconfig.json](#include-the-eslint-file-in-your-tsconfigjson)
   - [Adjust configuration as needed](#adjust-configuration-as-needed)
   - [Recommended IDE extensions](#recommended-ide-extensions)
     - [VS Code](#vs-code)
@@ -74,6 +75,19 @@ Copy these files into the same directory where your `package.json` lives.
 - _.\_eslintrc.base.cjs_ -> _.eslintrc.cjs_
 - _.editorconfig_
 - _.markdownlint.json_ (optional)
+
+### Include the eslint file in your tsconfig.json
+
+In the `include` block of your `tsconfig.json` file, add the following:
+
+```json
+{
+  "include": [
+    // ...any other files or folders you want to include...
+    ".eslintrc.cjs" // seems to prevent "not found in project errors
+  ]
+}
+```
 
 ### Adjust configuration as needed
 
@@ -150,7 +164,7 @@ name.
 
 ```ts
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const someLambda = new ServiceLambda(this, 'SomeService', someLambdaProps)
+const someLambda = new ServiceLambda(this, 'SomeService', someLambdaProps);
 ```
 
 #### Disable a rule for multiple lines and single rule
@@ -160,8 +174,8 @@ add the closing comment.
 
 ```ts
 /* eslint-disable @typescript-eslint/no-unused-vars */
-const someLambda = new ServiceLambda(this, 'SomeService', someLambdaProps)
-const someOtherLambda = new ServiceLambda(this, 'SomeOtherService', someOtherLambdaProps)
+const someLambda = new ServiceLambda(this, 'SomeService', someLambdaProps);
+const someOtherLambda = new ServiceLambda(this, 'SomeOtherService', someOtherLambdaProps);
 /* eslint-enable @typescript-eslint/no-unused-vars */
 ```
 
