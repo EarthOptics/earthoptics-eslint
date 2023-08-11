@@ -2,6 +2,23 @@
 
 This repo provides an ESLint configurations for TypeScript projects.
 
+- [Setup](#setup)
+  - [Assumptions](#assumptions)
+  - [Install dependencies](#install-dependencies)
+    - [Install via `npm`](#install-via-npm)
+    - [Or install via `yarn`](#or-install-via-yarn)
+  - [Copy config files](#copy-config-files)
+  - [Adjust configuration as needed](#adjust-configuration-as-needed)
+  - [Recommended IDE extensions](#recommended-ide-extensions)
+    - [VS Code](#vs-code)
+      - [Base extensions](#base-extensions)
+      - [Optional extensions](#optional-extensions)
+  - [Create `npm scripts`](#create-npm-scripts)
+    - [Vim](#vim)
+- [Resources](#resources)
+  - [Recommended tools](#recommended-tools)
+  - [Guides and tutorials](#guides-and-tutorials)
+
 ## Setup
 
 Install dependencies and the config itself.
@@ -17,23 +34,27 @@ Install dependencies and the config itself.
 
 ### Install dependencies
 
-Choose one of the two installation methods.
+Choose one of the two installation methods. The installation includes:
+
+- **Base dependencies:** ESLint and Prettier for linting and formatting, and TypeScript 5
+- **Testing dependencies:** Jest and its TypeScript friends
+- **This ESLint config:** This module itself
 
 #### Install via `npm`
 
-If your project already has a `package-lock.json` file, use this.
+If your project already has a `package-lock.json` file, use `npm`
 
 ```sh
-npm i -D 'eslint@^8.45.0' 'jest@~28.1.3' 'prettier@^2.8.8' 'typescript@^5'
+npm i -D 'eslint@^8.45.0' 'prettier@^2.8.8' 'typescript@^5' 'jest@~28.1.3' '@types/jest@~28.1.3' 'ts-jest@^28'
 npm i -D https://github.com/EarthOptics/earthoptics-eslint
 ```
 
 #### Or install via `yarn`
 
-If your project already has a `yarn.lock` file, use this.
+If your project already has a `yarn.lock` file, use `yarn`:
 
 ```sh
-yarn add -D 'eslint@^8.45.0' 'jest@~28.1.3' 'prettier@^2.8.8' 'typescript@^5'
+yarn add -D 'eslint@^8.45.0' 'prettier@^2.8.8' 'typescript@^5' 'jest@~28.1.3' '@types/jest@~28.1.3' 'ts-jest@^28'
 yarn add -D https://github.com/EarthOptics/earthoptics-eslint
 ```
 
@@ -43,8 +64,8 @@ Copy these files into the same directory where your `package.json` lives.
 
 - _.prettierrc_
 - _.\_eslintrc.base.cjs_ -> _.eslintrc.cjs_
+- _.editorconfig_
 - _.markdownlint.json_ (optional)
-- _.editorconfig_ (optional)
 
 ### Adjust configuration as needed
 
@@ -75,9 +96,27 @@ need to install the following extensions.
   All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one): all
   you need to write Markdown (keyboard shortcuts, table of contents, auto preview and more)
 
+### Create `npm scripts`
+
+Consider adding these commands to the `scripts` block of your `package.json` file. They will perform
+the following actions:
+
+- `npm run lint`: run ESLint on all TypeScript files in the project
+- `npm run lint:fix`: same as `npm run lint` plus fix any issues that can be automatically fixed
+
+```json
+{
+  "scripts": {
+    "lint": "eslint --ext .ts,.tsx .",
+    "lint:fix": "eslint --fix --ext .ts,.tsx .",
+    "prettier": "prettier --write ."
+  }
+}
+```
+
 #### Vim
 
-TODO...
+Google "Vim stuff" 😛
 
 ## Resources
 
