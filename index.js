@@ -53,6 +53,12 @@ module.exports = {
   // File- or directory-specific overrides, e.g. your `bin` directory or `*.test.ts` files.
   overrides: [
     {
+      files: ['bin/*.ts', 'lib/*.ts'], // it's common in CDK repos to use bare `new()` statements
+      rules: {
+        'no-new': 0,
+      }
+    },
+    {
       // ℹ️ This is a total Jason portal-ui-specific thing. If you don't need to enforce padding
       // between line statements for these scenarios, you can remove this.
       files: [
