@@ -5,8 +5,5 @@
   "singleQuote": true,
   "tabWidth": 2,
   "multilineArraysWrapThreshold": 3,
-  "trailingComma": "es5",
-  "plugins": [
-    "./node_modules/prettier-plugin-multiline-arrays"
-  ]
+  "trailingComma": "es5"
 }
