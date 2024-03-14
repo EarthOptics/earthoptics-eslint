@@ -65,6 +65,7 @@ module.exports = {
         'index.ts',
         'config*.ts',
         'types*.ts',
+        'types*.tsx',
       ],
       rules: {
         'padding-line-between-statements': [
