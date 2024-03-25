@@ -221,6 +221,7 @@ module.exports = {
     'prefer-template': 2,
     'prefer-destructuring': [2, { object: true, array: false }],
     'quote-props': [2, 'as-needed'],
+    'radix': [2, 'as-needed'],
     'space-before-blocks': 2,
     'space-before-function-paren': [
       2,
