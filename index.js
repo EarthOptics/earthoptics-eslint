@@ -176,6 +176,10 @@ module.exports = {
     // "curly": 2, // prettier 😢
     'dot-location': [2, 'property'],
     // "function-paren-newline": [2, { "minItems": 3 }], // prettier 😢
+    // Note: you must disable the base rule as it can report incorrect errors. Needs to work with
+    // `@typescript-eslint/lines-between-class-members`. Supposedly it seems to be deprecated but
+    // still working 🤷 https://typescript-eslint.io/rules/lines-between-class-members/
+    'lines-between-class-members': 0,
     'max-len': [
       2,
       {
@@ -248,6 +252,15 @@ module.exports = {
       {
         allowExpressions: true,
       },
+    ],
+    '@typescript-eslint/lines-between-class-members': [
+      2,
+      'always',
+      {
+        // Unfortunately will not enforce public + public to NOT have a newline, for example, but at
+        // least it will let you do that without it complaining.
+        exceptAfterSingleLine: true,
+      }
     ],
     '@typescript-eslint/naming-convention': [
       2,
