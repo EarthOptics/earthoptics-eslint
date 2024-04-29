@@ -209,6 +209,10 @@ module.exports = {
     ],
     'no-trailing-spaces': 2,
     'no-underscore-dangle': 0,
+    'no-unused-expressions': [2, {
+      // We will be using these a lot as Prisma does not support PostGIS yet
+      'allowTaggedTemplates': true,
+    }],
     'no-whitespace-before-property': 2,
     'object-curly-newline': [
       2,
