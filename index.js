@@ -207,6 +207,8 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
+    // Deprecated in v8.46.0: https://eslint.org/docs/latest/rules/no-return-await
+    'no-return-await': 0,
     'no-trailing-spaces': 2,
     'no-underscore-dangle': 0,
     'no-unused-expressions': [2, {
