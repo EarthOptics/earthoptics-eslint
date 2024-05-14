@@ -286,6 +286,8 @@ module.exports = {
         next: ['interface', 'type'],
       },
     ],
+    // Deprecated in v8.46.0: https://eslint.org/docs/latest/rules/no-return-await
+    '@typescript-eslint/return-await': 0,
     '@typescript-eslint/sort-type-constituents': [
       1,
       {
