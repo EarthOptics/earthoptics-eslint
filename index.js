@@ -204,6 +204,7 @@ module.exports = {
     'no-restricted-syntax': [
       2,
       'ForInStatement',
+      'ForOfStatement',
       'LabeledStatement',
       'WithStatement',
     ],
